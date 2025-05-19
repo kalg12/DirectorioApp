@@ -10,9 +10,18 @@ const consumirApi = () => {
     .then((data) => console.log(data))
     //Descubrir que hacer en caso de que no me corresponda
     .catch((error) => console.log(error));
+
+  //EL DOM - Document Object Model
+  // Semana 2: Apartir de esta sesión, vamos a identificar a los elementos del HTML con un "id"
+
+  //Creo una constante y le paso como valor el id del H1 que está en la línea 17 de mi HTML
+  //con getElementById
+  const titulo = document.getElementById("tituloEncabezado");
+
+  //Imprimo la variable titulo pero con el atributo textContent
+  console.log(titulo.textContent);
+
+  //La data de la api la vamos a llevar al HTML
 };
 
 consumirApi();
-
-// TAREA EN INGLÉS HACER TODO
-//Consumir otra API y mostrar la data en consola como acá arriba 👆🏼
