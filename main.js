@@ -1,6 +1,20 @@
 //En JS tenemos las funciones de tipo flecha
 //Utilzaremos fetch qué es un método para consumir una API
 
+/* Defino en un arreglo las imagenes a utilizar */
+const arregloDeImagenes = [
+  "./src/images/01.jpeg",
+  "./src/images/02.jpeg",
+  "./src/images/03.jpeg",
+  "./src/images/04.jpeg",
+  "./src/images/05.jpeg",
+  "./src/images/06.jpeg",
+  "./src/images/07.jpg",
+  "./src/images/08.webp",
+  "./src/images/09.png",
+  "./src/images/10.jpg",
+];
+
 //Paso 1: Función flecha
 const consumirApi = () => {
   fetch("https://jsonplaceholder.typicode.com/users")
@@ -14,11 +28,11 @@ const consumirApi = () => {
 
       /* Aquí vamos a facilitarnos la vida con ForEach */
       data.forEach(
-        (personita) =>
+        (personita, index) =>
           (contenedor.innerHTML += `
 
 <div class="card" style="width: 18rem;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png" class="card-img-top" alt="usuario">
+  <img src=${arregloDeImagenes[index]} class="card-img-top" alt="usuario">
   <div class="card-body">
     <h5 class="card-title">${personita.name}</h5>
     <p class="card-text">Información de contacto de la persona</p>
